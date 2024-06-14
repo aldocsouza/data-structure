@@ -1,107 +1,50 @@
-### Classe `LinkedList`
+# Estruturas de Dados
+Este repositório contém implementações básicas de algumas das estruturas de dados mais importantes e amplamente utilizadas em Ciência da Computação. Os conceitos abordados incluem Listas, Pilhas, Filas, Árvores e Árvores Binárias de Busca. Este material foi desenvolvido como parte do programa Santander Coders em parceria com a Ada Tech.
 
-A classe `LinkedList` define uma lista ligada que contém nós (`Node`) e métodos para manipular a lista.
+## Estruturas de Dados Implementadas
+* Lista
+* Pilha
+* Fila
+* Árvore
+* Árvore Binária de Busca
 
-#### Atributos
+## Introdução
+As estruturas de dados são formas de organizar e armazenar dados de maneira eficiente, permitindo fácil acesso e modificação. A escolha da estrutura de dados correta pode fazer uma grande diferença na eficiência de um algoritmo. Este repositório fornece implementações básicas dessas estruturas, com exemplos de uso e testes.
 
-- `private Node head;`: Aponta para o primeiro nó da lista.
-- `private Node tail;`: Aponta para o último nó da lista.
-- `private int length;`: Mantém o tamanho da lista.
+### <b>Lista</b> 
+Uma Lista é uma coleção ordenada de elementos onde cada elemento é acessível por um índice. Existem várias formas de implementar listas, como arrays (vetores) e listas ligadas.
 
-#### Classe Interna `Node`
+* Implementação de Lista
+* Operações: inserção, remoção, busca, etc.
+* 
+### <b>Pilha</b>
+Uma Pilha (stack) é uma estrutura de dados que segue o princípio LIFO (Last In, First Out). A última entrada é a primeira a ser removida.
 
-```java
-class Node {
-    String data;
-    Node next;
+* Implementação de Pilha
+* Operações: push (inserir), pop (remover), peek (olhar o topo), etc.
 
-    Node(String data) {
-        this.data = data;
-    }
-}
+### <b>Fila</b>
+Uma Fila (queue) é uma estrutura de dados que segue o princípio FIFO (First In, First Out). A primeira entrada é a primeira a ser removida.
+
+* Implementação de Fila
+* Operações: enqueue (inserir), dequeue (remover), peek (olhar a frente), etc.
+
+### <b>Árvore</b>
+Uma Árvore é uma estrutura hierárquica onde cada elemento é chamado de nó e possui um valor e uma lista de referências para nós filhos.
+
+* Implementação de Árvore
+* Operações: inserção, remoção, travessia (em ordem, pré-ordem, pós-ordem), etc.
+
+### <b>Árvore Binária de Busca</b>
+Uma Árvore Binária de Busca (BST) é um tipo específico de árvore binária onde cada nó possui no máximo dois filhos e os nós são organizados de tal forma que o nó da esquerda possui um valor menor e o nó da direita possui um valor maior do que o nó pai.
+
+* Implementação de Árvore Binária de Busca
+* Operações: inserção, remoção, busca, travessia em ordem, etc.
+
+### <b>Como Usar</b>
+Clone o repositório para sua máquina local:
+
+```bash
+https://github.com/aldocsouza/data-structure.git
 ````
-
-* Atributos: Cada nó contém data (o valor armazenado) e next (uma referência para o próximo nó).
-* Construtor: Inicializa o nó com um valor de data.
-
-### Construtor da LinkedList
-```java
-public LinkedList(String data) {
-    length = 1;
-    Node newNode = new Node(data);
-    head = newNode;
-    tail = newNode;
-}
-````
-* Inicializa: A lista com um único nó, definindo head e tail para esse nó e length como 1.
-
-## Métodos de Acesso e Manipulação
-* `getHead` e `getTail`: Imprimem os dados do primeiro e último nó, respectivamente.
-* `getLength`: Imprime o comprimento da lista.
-* `makeEmpty`: Esvazia a lista, redefinindo head, tail e length.
-* `print`: Imprime todos os elementos da lista.
-* `append`: Adiciona um novo nó ao final da lista.
-* `removeLast`: Remove o último nó da lista.
-* `preppend`: Adiciona um novo nó no início da lista.
-* `removeFirst`: Remove o primeiro nó da lista.
-* `get`: Retorna o nó em um índice específico.
-* `insert`: Insere um nó em um índice específico.
-* `set`: Define o valor de um nó em um índice específico.
-* `remove`: Remove o nó em um índice específico.
-
-### Exemplos de Uso
-#### 1. Criação da Lista:
-```java
-LinkedList list = new LinkedList("Produto 1");
-````
-
-#### 2. Adicionando Elementos:
-```java
-list.append("Produto 2");
-list.append("Produto 3");
-````
-
-#### 3. Imprimindo a Lista:
-```java
-list.print();
-// Saída esperada:
-// ###########################################
-// Produto 1
-// Produto 2
-// Produto 3
-// ###########################################
-````
-
-#### 4. Removendo o Último Elemento:
-```java
-list.removeLast();
-list.print();
-// Saída esperada:
-// ###########################################
-// Produto 1
-// Produto 2
-// ###########################################
-````
-
-#### 5. Inserindo no Início:
-```java
-list.preppend("Produto 0");
-list.print();
-// Saída esperada:
-// ###########################################
-// Produto 0
-// Produto 1
-// Produto 2
-// ###########################################
-````
-
-## Importância no Contexto de Estruturas de Dados
-As listas ligadas são fundamentais para:
-
-* <strong>Flexibilidade</strong>: Permitem inserções e remoções eficientes em qualquer posição, especialmente em estruturas dinâmicas onde o tamanho pode variar.
-* <strong>Implementação de Outras Estruturas</strong>: São usadas para implementar pilhas, filas, listas duplamente ligadas, e outras estruturas complexas.
-* <strong>Compreensão de Conceitos</strong>: Ajudam a entender conceitos importantes como alocação dinâmica de memória, referências, e como as estruturas de dados podem ser gerenciadas manualmente.
-
-## Conclusão
-
-A implementação de uma LinkedList é um exemplo clássico e muito utilizado no estudo de Estruturas de Dados. Ela fornece uma base sólida para entender operações fundamentais de gerenciamento de coleções de dados de forma eficiente e dinâmica.
+Cada estrutura de dados possui seu próprio diretório com código de implementação e exemplos de uso.
